@@ -1,4 +1,3 @@
-#void *memset (void *s, int c, size_t n);
 global _ft_memset
 
 _ft_memset:

@@ -1,9 +1,8 @@
-#void *memcpy(void *dest, const void *src, size_t n);
 global _ft_memcpy
 
 _ft_memcpy:
-	push	RDI
-	mov		RCX, RDX
-	repnz	movs
+	push	rdi
+	mov		rcx, rdx
+	repnz	movsb
 	pop		rax
 	ret
