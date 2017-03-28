@@ -16,7 +16,9 @@ SRC=ft_bzero.s \
 	ft_strcat.s \
 	ft_tolower.s \
 	ft_toupper.s \
-	ft_strlen.s
+	ft_strlen.s \
+	ft_memset.s \
+	ft_memcpy.s
 
 OBJ=$(SRC:.s=.o)
 
