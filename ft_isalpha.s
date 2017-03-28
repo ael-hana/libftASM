@@ -17,4 +17,4 @@ _ft_alpha:
 	jle		TRUE
 	cmp		rdi, 97
 	jge		TRUE
-	jmp		false
+	jmp		FALSE

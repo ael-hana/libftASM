@@ -3,7 +3,7 @@ global _ft_strcat
 fin:
 	ret
 
-_ft_strcat
+_ft_strcat:
 	mov		rax, rdi
 	cmp		rdi, 0
 	jz		fin
@@ -11,14 +11,15 @@ _ft_strcat
 	jz		fin
 
 start:
-	cmp		[rdi], 0
+	cmp		byte [rdi], 0
 	jz		next
 	inc		rdi
 	jmp		start
 
 next:
-	mov		[rdi], [rsi]
-	cmp		[rsi], 0
+	mov		r8, [rsi]
+	mov		[rdi], r8
+	cmp		byte [rsi], 0
 	jz		fin
 	inc		rdi
 	inc		rsi
