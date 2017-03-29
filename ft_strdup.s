@@ -4,6 +4,7 @@ extern	_ft_memcpy
 extern	_malloc
 
 _ft_strdup:
+	push	rsi
 	push	rdi
 	call	_ft_strlen
 	push	rax
@@ -13,4 +14,5 @@ _ft_strdup:
 	pop		rdx
 	pop		rsi
 	call	_ft_memcpy
+	pop		rsi
 	ret

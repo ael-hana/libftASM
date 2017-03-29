@@ -8,7 +8,7 @@ TRUE:
 	mov		rax, 1
 	ret
 
-_ft_alpha:
+_ft_isalpha:
 	cmp		rdi, 65
 	jl		FALSE
 	cmp		rdi, 122
