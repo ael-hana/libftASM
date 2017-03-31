@@ -2,20 +2,19 @@
 
 section .text
 	global _ft_cat
+	extern _fb
 
 _ft_cat:
-	push	rbx
 	push	rbp
+	mov		rbp, rsp
 	sub		rbp, BUF
-	jmp		loop
 
 loop:
 	mov		rsi, rbp
 	mov		rdx, BUF
 	mov		rax, 0x2000003
 	syscall
-	cmp		rax, 0
-	jle		end
+	jc		end
 	mov		rdx, rax	
 	mov		rsi, rbp
 	mov		r8, rdi
@@ -24,9 +23,8 @@ loop:
 	syscall
 	mov		rdi, r8
 	cmp		rax, 0
-	je		end
-	jmp		loop
+	jg		loop
 
 end:
 	pop		rbp
-	pop		rbx
+	ret
