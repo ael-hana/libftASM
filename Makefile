@@ -20,6 +20,8 @@ SRC=ft_bzero.s \
 	ft_memset.s \
 	ft_memcpy.s \
 	ft_cat.s \
+	ft_strchr.s \
+	ft_strrchr.s \
 	ft_strdup.s
 
 OBJ=$(SRC:.s=.o)
