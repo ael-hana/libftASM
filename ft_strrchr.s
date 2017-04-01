@@ -5,7 +5,7 @@ _ft_strrchr:
 	mov		rbp, rsp
 	mov		rax, 0
 	cmp		rdi, 0
-	je		end
+	je		eos
 	mov 	rdx, rsi
 	jmp		loop
 
@@ -22,5 +22,12 @@ loop:
 	jmp		loop
 
 end:
+	cmp		byte [rdi], dl
+	je		eos
+	leave
+	ret
+
+eos:
+	mov		rax, rdi
 	leave
 	ret
