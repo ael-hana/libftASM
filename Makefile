@@ -22,6 +22,9 @@ SRC=ft_bzero.s \
 	ft_cat.s \
 	ft_strchr.s \
 	ft_strrchr.s \
+	ft_strclen.s \
+	ft_strplen.s \
+	ft_putstr.s \
 	ft_strdup.s
 
 OBJ=$(SRC:.s=.o)
